@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var eventRepository: EventRepository;
+    var eventRepository: EventRepository = EventRepository();
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        eventRepository.getEventsFromJSON()
     }
 
     //Test commit from VS

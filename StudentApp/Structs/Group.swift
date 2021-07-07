@@ -1,4 +1,4 @@
-struct Group{
+struct Group: Decodable{
 
     
 }
