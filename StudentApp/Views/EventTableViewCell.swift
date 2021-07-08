@@ -23,7 +23,6 @@ class EventTableViewCell: UITableViewCell {
     
     var event: Event?
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,9 +35,20 @@ class EventTableViewCell: UITableViewCell {
     }
     
     func setCell(_ e:Event){
+        let df = DateFormatter()
+        df.dateFormat = "MMM d, h:mm a"
+
         self.event = e
+
+        guard self.event != nil else { return }
         
-        // TO DO: Set labels
+        // Set elements
+        // TODO: self.groupImageView.image = event?.image
+        self.groupLabel = event?.group
+        self.userLabel = event?.user
+        self.titleLabel.text = event?.title
+        self.dateLabel = df.string(from: event?.startDate) //TO DO: change this later
+        self.interestedLabel = "Interested - \(event?.interested)"
     }
 
 }

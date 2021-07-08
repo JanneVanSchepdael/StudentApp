@@ -45,12 +45,13 @@ class ViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.POSTCELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: 
+            Constants.POSTCELL_ID, for: indexPath) as! EventTableViewCell
         
-        //TO DO: configure cell with data
-        let title = self.events[indexPath.row].title
+        //Configure cell with data
+        let event = self.events[indexPath.row]
 
-        cell.textLabel?.text = title
+        cell.setCell(event)
 
         return cell
     }
