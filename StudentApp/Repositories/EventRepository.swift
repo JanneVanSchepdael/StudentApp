@@ -1,6 +1,12 @@
 import Foundation
 
+protocol EventDelegate {
+    func eventsFetched(_ events:[Event])
+}
+
 class EventRepository{
+
+    var delegate: EventDelegate?
 
     func getEventsFromJSON(){
         let data = self.readLocalFile(forName: "backend")
@@ -11,7 +17,13 @@ class EventRepository{
 
             let response = try decoder.decode(Response.self, from: data!)
             
-            dump(response)
+            if(response.events != nil){
+                DispatchQueue.main.async {
+                    self.delegate?.eventsFetched(response.events!)
+                }
+            }
+
+            //dump(response)
         } catch{
             print(error)
         }
