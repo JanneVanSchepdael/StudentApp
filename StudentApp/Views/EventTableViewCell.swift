@@ -44,11 +44,11 @@ class EventTableViewCell: UITableViewCell {
         
         // Set elements
         // TODO: self.groupImageView.image = event?.image
-        self.groupLabel = event?.group
-        self.userLabel = event?.user
+        self.groupLabel.text = event?.group
+        self.userLabel.text = event?.user
         self.titleLabel.text = event?.title
-        self.dateLabel = df.string(from: event?.startDate) //TO DO: change this later
-        self.interestedLabel = "Interested - \(event?.interested)"
+        self.dateLabel.text = df.string(from: event!.startDate) //TO DO: change this later
+        self.interestedLabel.text = "Interested - \(event?.interested ?? 0)"
     }
 
 }

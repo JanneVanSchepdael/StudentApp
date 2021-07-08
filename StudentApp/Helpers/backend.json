@@ -2,8 +2,8 @@
     "events": [
     {
         "id": 1,
-        "group": "",
-        "user": "",
+        "group": "HSC Salmonella",
+        "user": "Janne Van Schepdael",
         "title": "Event One",
         "interested": 17,
         "datePosted": "2021-03-07T08:24:23Z",
@@ -12,8 +12,8 @@
     },
     {
         "id": 2,
-        "group": "",
-        "user": "",
+        "group": "Moeder lies",
+        "user": "Ben Cremer",
         "title": "Event Two",
         "interested": 3547,
         "datePosted": "2000-05-26T18:30:23Z",
@@ -22,8 +22,8 @@
     },
     {
         "id": 3,
-        "group": "",
-        "user": "",
+        "group": "Ye boi",
+        "user": "Jacob Dewulf",
         "title": "Event Three",
         "interested": 0,
         "datePosted": "2019-01-26T19:00:23Z",
@@ -32,8 +32,8 @@
     },
     {
         "id": 4,
-        "group": "",
-        "user": "",
+        "group": "HSC Salmonella",
+        "user": "Janne Van Schepdael",
         "title": "Event Four",
         "interested": 100,
         "datePosted": "2021-05-26T16:00:23Z",
@@ -42,8 +42,8 @@
     },
     {
         "id": 5,
-        "group": "",
-        "user": "",
+        "group": "HSC Salmonella",
+        "user": "Janne Van Schepdael",
         "title": "Event Five",
         "interested": 25,
         "datePosted": "2020-07-26T16:00:23Z",

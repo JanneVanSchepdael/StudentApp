@@ -109,10 +109,10 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="X5q-oK-yux" id="Am3-sM-JX6"/>
                                             <outlet property="groupImageView" destination="Juf-qb-tDZ" id="WGx-cK-CbM"/>
-                                            <outlet property="groupLabel" destination="oSb-cO-fMD" id="guY-cZ-fPN"/>
+                                            <outlet property="groupLabel" destination="oSb-cO-fMD" id="tBL-yQ-QOU"/>
                                             <outlet property="interestedLabel" destination="Zfq-CA-6yC" id="O9g-A8-Rpz"/>
                                             <outlet property="titleLabel" destination="SEh-NQ-JWx" id="7Zd-F3-pyf"/>
-                                            <outlet property="userLabel" destination="hGm-Up-Aud" id="Wcb-hd-ZCJ"/>
+                                            <outlet property="userLabel" destination="hGm-Up-Aud" id="s69-7o-4IS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
