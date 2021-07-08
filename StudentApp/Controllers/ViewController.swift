@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.POSTCELL_ID, for: <#T##IndexPath#>)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.POSTCELL_ID, for: indexPath)
         
         //TO DO: configure cell with data
         let title = self.events[indexPath.row].title
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        //TO DO
     }
 
 }
