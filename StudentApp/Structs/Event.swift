@@ -12,7 +12,6 @@ struct Event : Decodable{
     var endDate = Date()
 
     enum CodingKeys: String, CodingKey {
-
         case id
         case group
         case user
