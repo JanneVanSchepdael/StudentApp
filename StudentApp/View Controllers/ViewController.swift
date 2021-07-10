@@ -27,6 +27,21 @@ class ViewController: UIViewController, UITableViewDataSource,
         
         eventRepository.getEventsFromJSON()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard tableView.indexPathForSelectedRow != nil else{
+            return
+        }
+        
+        // Event that was tapped on
+        let selectedEVent = events[tableView.indexPathForSelectedRow!.row]
+        
+        // Go to detail view controller
+        let detailVC = segue.destination as! DetailViewController
+        
+        //set event in detail controller
+        detailVC.event = selectedEVent
+    }
 
     // MARK: - Event Delegate Methods
     
