@@ -36,11 +36,12 @@
             </objects>
             <point key="canvasLocation" x="-2583" y="-291"/>
         </scene>
-        <!--Item-->
+        <!--Groups-->
         <scene sceneID="0AS-n4-cW8">
             <objects>
                 <navigationController id="PNa-II-744" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="o7q-U4-6YN"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="person.3.fill" catalog="system" id="o7q-U4-6YN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aTv-Tq-t6N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,6 +56,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

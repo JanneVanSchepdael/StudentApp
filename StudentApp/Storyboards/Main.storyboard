@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="jTe-qE-0aV">
             <objects>
-                <tabBarController id="kB0-Pe-1YR" sceneMemberID="viewController">
+                <tabBarController id="kB0-Pe-1YR" customClass="TabBarViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vu2-mO-Qq5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -61,7 +61,7 @@
         <scene sceneID="wg1-ci-nYV">
             <objects>
                 <viewControllerPlaceholder storyboardName="Add" id="EJQ-MM-Mis" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="EGY-wY-JbL"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus.rectangle.fill" catalog="system" id="EGY-wY-JbL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQQ-vq-nWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,4 +78,7 @@
             <point key="canvasLocation" x="-2123" y="-621"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+    </resources>
 </document>

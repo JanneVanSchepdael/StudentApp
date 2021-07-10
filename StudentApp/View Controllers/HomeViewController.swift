@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource,
+class HomeViewController: UIViewController, UITableViewDataSource,
                      UITableViewDelegate, EventDelegate {
+    
     
     @IBOutlet weak var tableView: UITableView!
     

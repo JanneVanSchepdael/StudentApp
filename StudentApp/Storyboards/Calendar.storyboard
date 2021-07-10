@@ -36,11 +36,12 @@
             </objects>
             <point key="canvasLocation" x="-2055" y="-93"/>
         </scene>
-        <!--Item-->
+        <!--Calendar-->
         <scene sceneID="IyS-wC-eeX">
             <objects>
                 <navigationController id="QlG-7n-O8k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Yms-hi-EkX"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="Yms-hi-EkX"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X4C-Nb-fhj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,6 +56,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
