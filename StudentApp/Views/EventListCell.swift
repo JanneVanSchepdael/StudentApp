@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventTableViewCell: UITableViewCell {
+class EventListCell: UITableViewCell {
     
     @IBOutlet weak var groupImageView: UIImageView!
     
@@ -22,17 +22,6 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var interestedLabel: UILabel!
     
     var event: Event?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func setCell(_ e:Event){
         let df = DateFormatter()
@@ -50,5 +39,18 @@ class EventTableViewCell: UITableViewCell {
         self.dateLabel.text = df.string(from: event!.startDate) //TO DO: change this later
         self.interestedLabel.text = "Interested - \(event?.interested ?? 0)"
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+    
 
 }

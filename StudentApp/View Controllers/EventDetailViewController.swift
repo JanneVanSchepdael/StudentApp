@@ -7,16 +7,14 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class EventDetailViewController: UITableViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    var event:Event?
+    private var event:Event?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    func configure(with event: Event){
+        self.event = event
     }
     
     // Load variables before view loads
