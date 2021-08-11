@@ -24,6 +24,9 @@ class EventListViewController: UITableViewController, EventDelegate {
 
         // Set Delegate of tableview
         tableView.delegate = self
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300
 
         configureItems()
     }
