@@ -14,7 +14,6 @@ class EventListDataSource: NSObject {
         self.events = events
         super.init()
     }
-    
 }
 
 
@@ -29,8 +28,8 @@ extension EventListDataSource: UITableViewDataSource{
         
         //Configure cell with data
         let event = self.events[indexPath.row]
-
-        cell.setCell(event)
+        
+        cell.configure(event)
 
         return cell
     }

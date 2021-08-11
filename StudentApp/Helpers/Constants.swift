@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constants {
-    static var EVENTCELL_ID = "EventCell"
+    static var EVENTCELL_ID = "EventListCell"
 }

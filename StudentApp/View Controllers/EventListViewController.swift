@@ -21,10 +21,7 @@ class EventListViewController: UITableViewController, EventDelegate {
         // Set as delegate for itself
         eventRepository.delegate = self
         eventRepository.getEventsFromJSON()
-        
-        // Set Datasource of tableview
-        eventListDataSource = EventListDataSource(events: events)
-        tableView.dataSource = eventListDataSource
+
         // Set Delegate of tableview
         tableView.delegate = self
 
@@ -60,22 +57,14 @@ class EventListViewController: UITableViewController, EventDelegate {
     }
 
     // MARK: - Event Delegate Methods
-    
     func eventsFetched(_ events: [Event]) {
         self.events = events
-
+        
+        // Set Datasource of tableview
+        eventListDataSource = EventListDataSource(events: events)
+        tableView.dataSource = eventListDataSource
+        
         // Refresh tableview
         tableView.reloadData()
     }
-
-    
-    // MARK: - TableView Methods
-
-    
-
 }
-
-extension EventListViewController{
-    
-}
-

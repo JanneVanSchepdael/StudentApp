@@ -23,7 +23,7 @@ class EventListCell: UITableViewCell {
     
     var event: Event?
     
-    func setCell(_ e:Event){
+    func configure(_ e:Event){
         let df = DateFormatter()
         df.dateFormat = "MMM d, h:mm a"
 
@@ -32,25 +32,11 @@ class EventListCell: UITableViewCell {
         guard self.event != nil else { return }
         
         // Set elements
-        // TODO: self.groupImageView.image = event?.image
-        self.groupLabel.text = event?.group
+        self.groupImageView.image = UIImage(named: "profile")
+        self.groupLabel.text = event?.group.name
         self.userLabel.text = event?.user
         self.titleLabel.text = event?.title
         self.dateLabel.text = df.string(from: event!.startDate) //TO DO: change this later
         self.interestedLabel.text = "Interested - \(event?.interested ?? 0)"
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    
-
 }

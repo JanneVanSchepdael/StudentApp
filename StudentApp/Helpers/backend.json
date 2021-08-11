@@ -2,7 +2,18 @@
     "events": [
     {
         "id": 1,
-        "group": "HSC Salmonella",
+        "group": {
+            "name": "HSC Salmonella",
+            "followers": 535,
+            "description": "description goes here",
+            "website": "www.hscsalmonella.be",
+            "shortDescription": "Gent beeft, salmonella leeft",
+            "groupSort": "Studentenvereniging",
+            "imageUrl": ""
+        },
+        "bannerUrl": "",
+        "location": "Gent",
+        "description": "Just another description",
         "user": "Janne Van Schepdael",
         "title": "Event One",
         "interested": 17,
@@ -12,7 +23,18 @@
     },
     {
         "id": 2,
-        "group": "Moeder lies",
+        "group": {
+            "name": "Moeder lies",
+            "followers": 2430,
+            "description": "description goes here",
+            "website": "www.moederlies.be",
+            "shortDescription": "Gent beeft, salmonella leeft",
+            "groupSort": "Studentenvereniging",
+            "imageUrl": ""
+        },
+        "bannerUrl": "",
+        "location": "",
+        "description": "",
         "user": "Ben Cremer",
         "title": "Event Two",
         "interested": 3547,
@@ -22,7 +44,18 @@
     },
     {
         "id": 3,
-        "group": "Ye boi",
+        "group": {
+            "name": "Ye boi",
+            "followers": 7,
+            "description": "description goes here",
+            "website": "www.jeudgroep.be",
+            "shortDescription": "Wij zijn een jeugdgroep",
+            "groupSort": "Jeugdgroep",
+            "imageUrl": ""
+        },
+        "bannerUrl": "",
+        "location": "",
+        "description": "",
         "user": "Jacob Dewulf",
         "title": "Event Three",
         "interested": 0,
@@ -32,7 +65,18 @@
     },
     {
         "id": 4,
-        "group": "HSC Salmonella",
+        "group": {
+            "name": "HSC Salmonella",
+            "followers": 535,
+            "description": "description goes here",
+            "website": "www.hscsalmonella.be",
+            "shortDescription": "Gent beeft, salmonella leeft",
+            "groupSort": "Studentenvereniging",
+            "imageUrl": ""
+        },
+        "bannerUrl": "",
+        "location": "",
+        "description": "",
         "user": "Janne Van Schepdael",
         "title": "Event Four",
         "interested": 100,
@@ -42,7 +86,18 @@
     },
     {
         "id": 5,
-        "group": "HSC Salmonella",
+        "group": {
+            "name": "HSC Salmonella",
+            "followers": 535,
+            "description": "description goes here",
+            "website": "www.hscsalmonella.be",
+            "shortDescription": "Gent beeft, salmonella leeft",
+            "groupSort": "Studentenvereniging",
+            "imageUrl": ""
+        },
+        "bannerUrl": "",
+        "location": "",
+        "description": "",
         "user": "Janne Van Schepdael",
         "title": "Event Five",
         "interested": 25,

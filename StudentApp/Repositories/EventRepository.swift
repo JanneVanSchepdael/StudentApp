@@ -23,12 +23,10 @@ class EventRepository{
                 }
             }
 
-            //dump(response)
+            //dump(response.events!)
         } catch{
             print(error)
         }
-
-        
     }
 
     //SOURCE: https://programmingwithswift.com/parse-json-from-file-and-url-with-swift/
