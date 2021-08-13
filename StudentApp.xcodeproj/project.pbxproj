@@ -27,6 +27,17 @@
 		6FE184AA2695E76600C31115 /* backend.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA2AFF2695D68800B5A154 /* backend.json */; };
 		6FE184B42696FFAA00C31115 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE184B32696FFAA00C31115 /* Constants.swift */; };
 		6FE184B82697321100C31115 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE184B72697321100C31115 /* EventListCell.swift */; };
+		9D01CB6326C694890057E771 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6226C694890057E771 /* SettingsTableViewController.swift */; };
+		9D01CB6526C694E40057E771 /* SettingsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6426C694E40057E771 /* SettingsDataSource.swift */; };
+		9D01CB6726C6B9AD0057E771 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6626C6B9AD0057E771 /* NotificationCell.swift */; };
+		9D01CB6926C6BB110057E771 /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6826C6BB110057E771 /* NotificationListViewController.swift */; };
+		9D01CB6B26C6BBA30057E771 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6A26C6BBA30057E771 /* Notification.swift */; };
+		9D01CB6D26C6BC5D0057E771 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6C26C6BC5D0057E771 /* NotificationRepository.swift */; };
+		9D01CB6F26C6BD170057E771 /* NotificationListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB6E26C6BD170057E771 /* NotificationListDataSource.swift */; };
+		9D01CB7126C703500057E771 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB7026C703500057E771 /* ProfileViewController.swift */; };
+		9D01CB7326C70A770057E771 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB7226C70A770057E771 /* GroupsViewController.swift */; };
+		9D01CB7526C70FE20057E771 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB7426C70FE20057E771 /* AddEventViewController.swift */; };
+		9D01CB8126C710B00057E771 /* AddEventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01CB8026C710B00057E771 /* AddEventDataSource.swift */; };
 		9D9F198426C1A1750027060F /* EventListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F198326C1A1750027060F /* EventListDataSource.swift */; };
 		9D9F198826C1A68F0027060F /* EventDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F198726C1A68F0027060F /* EventDetailDataSource.swift */; };
 		9D9F198A26C2D6140027060F /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F198926C2D6140027060F /* BannerCell.swift */; };
@@ -59,6 +70,17 @@
 		6FC61A822699F79E004DD222 /* Groups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
 		6FE184B32696FFAA00C31115 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6FE184B72697321100C31115 /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		9D01CB6226C694890057E771 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		9D01CB6426C694E40057E771 /* SettingsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataSource.swift; sourceTree = "<group>"; };
+		9D01CB6626C6B9AD0057E771 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		9D01CB6826C6BB110057E771 /* NotificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewController.swift; sourceTree = "<group>"; };
+		9D01CB6A26C6BBA30057E771 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		9D01CB6C26C6BC5D0057E771 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
+		9D01CB6E26C6BD170057E771 /* NotificationListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListDataSource.swift; sourceTree = "<group>"; };
+		9D01CB7026C703500057E771 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D01CB7226C70A770057E771 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		9D01CB7426C70FE20057E771 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		9D01CB8026C710B00057E771 /* AddEventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDataSource.swift; sourceTree = "<group>"; };
 		9D9F198326C1A1750027060F /* EventListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListDataSource.swift; sourceTree = "<group>"; };
 		9D9F198726C1A68F0027060F /* EventDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailDataSource.swift; sourceTree = "<group>"; };
 		9D9F198926C2D6140027060F /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
@@ -118,6 +140,7 @@
 				6FBA2B002695D69D00B5A154 /* Event.swift */,
 				6FBA2B042695D6A000B5A154 /* Response.swift */,
 				9D9F199126C41B500027060F /* Group.swift */,
+				9D01CB6A26C6BBA30057E771 /* Notification.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -126,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				6FBA2AFD2695D67F00B5A154 /* EventRepository.swift */,
+				9D01CB6C26C6BC5D0057E771 /* NotificationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -145,6 +169,11 @@
 				6FBA2AE6267C9F5E00B5A154 /* EventListViewController.swift */,
 				6F7630CE2698C0BC00BE2187 /* EventDetailViewController.swift */,
 				6FC61A7D2699F5A6004DD222 /* TabBarViewController.swift */,
+				9D01CB6226C694890057E771 /* SettingsTableViewController.swift */,
+				9D01CB6826C6BB110057E771 /* NotificationListViewController.swift */,
+				9D01CB7026C703500057E771 /* ProfileViewController.swift */,
+				9D01CB7226C70A770057E771 /* GroupsViewController.swift */,
+				9D01CB7426C70FE20057E771 /* AddEventViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -171,6 +200,7 @@
 				9D9F198B26C2D6290027060F /* EventInfoCell.swift */,
 				9D9F198D26C2D6380027060F /* EventDescriptionCell.swift */,
 				9D9F198F26C2D6470027060F /* EventGroupCell.swift */,
+				9D01CB6626C6B9AD0057E771 /* NotificationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +220,9 @@
 			children = (
 				9D9F198326C1A1750027060F /* EventListDataSource.swift */,
 				9D9F198726C1A68F0027060F /* EventDetailDataSource.swift */,
+				9D01CB6426C694E40057E771 /* SettingsDataSource.swift */,
+				9D01CB6E26C6BD170057E771 /* NotificationListDataSource.swift */,
+				9D01CB8026C710B00057E771 /* AddEventDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -273,21 +306,32 @@
 				6F7630CF2698C0BC00BE2187 /* EventDetailViewController.swift in Sources */,
 				6FBA2AE7267C9F5E00B5A154 /* EventListViewController.swift in Sources */,
 				6FC61A7E2699F5A6004DD222 /* TabBarViewController.swift in Sources */,
+				9D01CB6B26C6BBA30057E771 /* Notification.swift in Sources */,
 				6FBA2AE3267C9F5E00B5A154 /* AppDelegate.swift in Sources */,
 				6FBA2AFE2695D67F00B5A154 /* EventRepository.swift in Sources */,
+				9D01CB8126C710B00057E771 /* AddEventDataSource.swift in Sources */,
 				9D9F198C26C2D6290027060F /* EventInfoCell.swift in Sources */,
 				6FBA2AE5267C9F5E00B5A154 /* SceneDelegate.swift in Sources */,
+				9D01CB7326C70A770057E771 /* GroupsViewController.swift in Sources */,
 				6FBA2B012695D69D00B5A154 /* Event.swift in Sources */,
 				9D9F198A26C2D6140027060F /* BannerCell.swift in Sources */,
+				9D01CB7126C703500057E771 /* ProfileViewController.swift in Sources */,
 				9D9F199226C41B500027060F /* Group.swift in Sources */,
 				9D9F199026C2D6470027060F /* EventGroupCell.swift in Sources */,
+				9D01CB6926C6BB110057E771 /* NotificationListViewController.swift in Sources */,
 				6F7630D12698C0EB00BE2187 /* CacheManager.swift in Sources */,
 				9D9F198826C1A68F0027060F /* EventDetailDataSource.swift in Sources */,
+				9D01CB6726C6B9AD0057E771 /* NotificationCell.swift in Sources */,
+				9D01CB6F26C6BD170057E771 /* NotificationListDataSource.swift in Sources */,
 				9D9F198E26C2D6380027060F /* EventDescriptionCell.swift in Sources */,
 				6FBA2B052695D6A000B5A154 /* Response.swift in Sources */,
 				9D9F198426C1A1750027060F /* EventListDataSource.swift in Sources */,
+				9D01CB6326C694890057E771 /* SettingsTableViewController.swift in Sources */,
 				6FE184B82697321100C31115 /* EventListCell.swift in Sources */,
 				6FE184B42696FFAA00C31115 /* Constants.swift in Sources */,
+				9D01CB7526C70FE20057E771 /* AddEventViewController.swift in Sources */,
+				9D01CB6D26C6BC5D0057E771 /* NotificationRepository.swift in Sources */,
+				9D01CB6526C694E40057E771 /* SettingsDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y85286KRG;
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -434,6 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y85286KRG;
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,12 +7,25 @@
 
 import UIKit
 
-class EventListViewController: UITableViewController, EventDelegate {
+class EventListViewController: UIViewController, UITableViewDelegate, EventDelegate {
         
+    @IBOutlet var filterSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet var searchBar: UISearchBar!
+    
+    @IBAction func segmentControlChanged(_ sender: UISegmentedControl) {
+        eventListDataSource?.filter = filter
+        tableView.reloadData()
+    }
     
     private var eventListDataSource: EventListDataSource?
     private var eventRepository: EventRepository = EventRepository();
+    private var filter: EventListDataSource.Filter {
+        return EventListDataSource.Filter(rawValue: filterSegmentedControl.selectedSegmentIndex) ?? .popular
+    }
+    
     var events = [Event]()
 
     override func viewDidLoad() {
@@ -24,24 +37,8 @@ class EventListViewController: UITableViewController, EventDelegate {
 
         // Set Delegate of tableview
         tableView.delegate = self
-        
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300
 
         configureItems()
-    }
-    
-    
-    private func configureItems(){
-        let leftNavBarButton = UIBarButtonItem(customView: searchBar)
-        self.navigationItem.leftBarButtonItem = leftNavBarButton
-        
-        searchBar.sizeToFit()
-        
-        var frame = searchBar.frame
-        frame.origin.x = 20
-        frame.size.width -= 125
-        searchBar.frame = frame
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,7 +47,7 @@ class EventListViewController: UITableViewController, EventDelegate {
         }
         
         // Event that was tapped on
-        let selectedEvent = events[tableView.indexPathForSelectedRow!.row]
+        let selectedEvent = events[tableView.indexPathForSelectedRow!.section]
         
         // Go to detail view controller
         let detailVC = segue.destination as! EventDetailViewController
@@ -69,5 +66,24 @@ class EventListViewController: UITableViewController, EventDelegate {
         
         // Refresh tableview
         tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if(section == 0){
+            return 0
+        }
+        return 12
+    }
+    
+    private func configureItems(){
+        let leftNavBarButton = UIBarButtonItem(customView: searchBar)
+        self.navigationItem.leftBarButtonItem = leftNavBarButton
+        
+        searchBar.sizeToFit()
+        
+        var frame = searchBar.frame
+        frame.origin.x = 18
+        frame.size.width -= 130
+        searchBar.frame = frame
     }
 }

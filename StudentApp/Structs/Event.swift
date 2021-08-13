@@ -7,6 +7,7 @@ struct Event : Decodable{
     var user: String = "PLACEHOLDER USER"
     var title: String = ""
     var interested: Int = 0
+    var following: Bool
     
     var bannerUrl: String = ""
     var location: String = ""
@@ -22,6 +23,7 @@ struct Event : Decodable{
         case group
         case title
         case interested
+        case following
         case bannerUrl
         case location
         case description
@@ -46,6 +48,7 @@ struct Event : Decodable{
         self.id = try container.decode(Int.self, forKey: .id)
         self.user = try container.decode(String.self, forKey: .user)
         self.title = try container.decode(String.self, forKey: .title)
+        self.following = try container.decode(Bool.self, forKey: .following)
         self.interested = try container.decode(Int.self, forKey: .interested)
         self.bannerUrl = try container.decode(String.self, forKey: .bannerUrl)
         self.location = try container.decode(String.self, forKey: .location)

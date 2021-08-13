@@ -2,6 +2,7 @@
     "events": [
     {
         "id": 1,
+        "following" : true,
         "group": {
             "name": "HSC Salmonella",
             "followers": 535,
@@ -23,6 +24,7 @@
     },
     {
         "id": 2,
+        "following" : false,
         "group": {
             "name": "Moeder lies",
             "followers": 2430,
@@ -44,6 +46,7 @@
     },
     {
         "id": 3,
+        "following" : true,
         "group": {
             "name": "Ye boi",
             "followers": 7,
@@ -65,6 +68,7 @@
     },
     {
         "id": 4,
+        "following" : false,
         "group": {
             "name": "HSC Salmonella",
             "followers": 535,
@@ -86,6 +90,7 @@
     },
     {
         "id": 5,
+        "following" : false,
         "group": {
             "name": "HSC Salmonella",
             "followers": 535,
@@ -105,5 +110,22 @@
         "startDate": "2021-03-07T08:24:23Z",
         "endDate": "2021-03-07T08:24:23Z"
     }
+    ],
+    "notifications": [
+        {
+            "imageUrl": "profile",
+            "notification": "Janne Van Schepdael has invited you to join the event 'Clubavond @ Cuba'. Let him know if you're coming!",
+            "date": "2021-03-07T08:24:23Z"
+        },
+        {
+            "imageUrl": "profile",
+            "notification": "Ben Cremer has invited you to join the event 'Clubavond @ Cuba'. Let him know if you're coming!",
+            "date": "2021-03-07T08:24:23Z"
+        },
+        {
+            "imageUrl": "profile",
+            "notification": "Jacob Dewulf has invited you to join the event 'Clubavond @ Cuba'. Let him know if you're coming!",
+            "date": "2021-03-07T08:24:23Z"
+        }
     ]
 }

@@ -4,53 +4,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="R1l-Iu-l3t">
-            <objects>
-                <viewController id="oCF-7y-S6V" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vo2-Eu-AF3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOADED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5H-ap-sBa">
-                                <rect key="frame" x="145" y="401" width="125" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Sr8-9h-7Lw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="slD-NN-vaH"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhr-bY-go7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2421.739130434783" y="178.79464285714286"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zvA-5k-pqK">
-            <objects>
-                <viewController id="DZw-nT-pjD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5cu-6i-1NL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3IH-BV-fXr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="grT-i6-hH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1660.8695652173915" y="187.5"/>
-        </scene>
         <!--New-->
         <scene sceneID="3GF-DN-HSq">
             <objects>
@@ -66,16 +23,170 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="oCF-7y-S6V" kind="relationship" relationship="rootViewController" id="t6J-r9-FtV"/>
+                        <segue destination="4I7-CP-dEn" kind="relationship" relationship="rootViewController" id="683-Cx-BMP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQi-tX-pAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3331.884057971015" y="178.79464285714286"/>
         </scene>
+        <!--Add Event-->
+        <scene sceneID="Eme-EG-PTM">
+            <objects>
+                <tableViewController id="4I7-CP-dEn" customClass="AddEventViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gZK-F6-PVm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddTitleCell" id="udx-3Y-lLY" customClass="AddTitleCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="udx-3Y-lLY" id="zLD-XA-rvR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aY4-9w-98S">
+                                            <rect key="frame" x="16" y="8" width="382" height="34.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aY4-9w-98S" firstAttribute="leading" secondItem="zLD-XA-rvR" secondAttribute="leading" constant="16" id="HV0-dR-7fR"/>
+                                        <constraint firstAttribute="trailing" secondItem="aY4-9w-98S" secondAttribute="trailing" constant="16" id="VdO-Ok-fKd"/>
+                                        <constraint firstAttribute="bottom" secondItem="aY4-9w-98S" secondAttribute="bottom" constant="8" id="rfM-1q-Lpj"/>
+                                        <constraint firstItem="aY4-9w-98S" firstAttribute="top" secondItem="zLD-XA-rvR" secondAttribute="top" constant="8" id="zGB-JN-Pw2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddLocationCell" id="Sr6-WM-Ga7" customClass="AddLocationCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="75" width="414" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sr6-WM-Ga7" id="Quq-gU-A2G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXC-aO-klO">
+                                            <rect key="frame" x="16" y="8" width="382" height="34.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aXC-aO-klO" secondAttribute="trailing" constant="16" id="7ak-IP-bgM"/>
+                                        <constraint firstAttribute="bottom" secondItem="aXC-aO-klO" secondAttribute="bottom" constant="8" id="J9r-pf-WFs"/>
+                                        <constraint firstItem="aXC-aO-klO" firstAttribute="leading" secondItem="Quq-gU-A2G" secondAttribute="leading" constant="16" id="NMb-E2-vAT"/>
+                                        <constraint firstItem="aXC-aO-klO" firstAttribute="top" secondItem="Quq-gU-A2G" secondAttribute="top" constant="8" id="QXp-r2-JkC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddDescriptionCell" rowHeight="150" id="i4A-6k-TeC" customClass="AddDescriptionCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="125.5" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i4A-6k-TeC" id="j1h-Fb-Vjv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyE-hM-DQn">
+                                            <rect key="frame" x="16" y="8" width="382" height="134"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="OyE-hM-DQn" secondAttribute="bottom" constant="8" id="7ns-Hm-o8H"/>
+                                        <constraint firstAttribute="trailing" secondItem="OyE-hM-DQn" secondAttribute="trailing" constant="16" id="RVE-sn-hlp"/>
+                                        <constraint firstItem="OyE-hM-DQn" firstAttribute="top" secondItem="j1h-Fb-Vjv" secondAttribute="top" constant="8" id="Ue1-d6-r0D"/>
+                                        <constraint firstItem="OyE-hM-DQn" firstAttribute="leading" secondItem="j1h-Fb-Vjv" secondAttribute="leading" constant="16" id="Yce-vR-qc2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStartDateCell" id="5gT-Ss-lK3" customClass="AddStartDateCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="275.5" width="414" height="216.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5gT-Ss-lK3" id="edz-9l-9Bt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="216.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Xvi-5T-Xsc">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="216.5"/>
+                                        </datePicker>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Xvi-5T-Xsc" secondAttribute="trailing" constant="8" id="1Ag-Ij-Vaj"/>
+                                        <constraint firstItem="Xvi-5T-Xsc" firstAttribute="leading" secondItem="edz-9l-9Bt" secondAttribute="leading" constant="8" id="1fb-GO-nCX"/>
+                                        <constraint firstItem="Xvi-5T-Xsc" firstAttribute="centerY" secondItem="edz-9l-9Bt" secondAttribute="centerY" id="OvX-JI-CkI"/>
+                                        <constraint firstItem="Xvi-5T-Xsc" firstAttribute="top" secondItem="edz-9l-9Bt" secondAttribute="top" id="YXq-mf-9kz"/>
+                                        <constraint firstItem="Xvi-5T-Xsc" firstAttribute="centerX" secondItem="edz-9l-9Bt" secondAttribute="centerX" id="kx4-0o-Kls"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xvi-5T-Xsc" secondAttribute="bottom" id="rgS-86-ZHs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddEndDateCell" id="hyz-PV-CFg" customClass="AddEndDateCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="492" width="414" height="216.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hyz-PV-CFg" id="Po6-Fs-lDP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="216.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="D8B-Ea-8gW">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="216.5"/>
+                                        </datePicker>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="D8B-Ea-8gW" secondAttribute="trailing" constant="8" id="DcK-tH-0Xd"/>
+                                        <constraint firstItem="D8B-Ea-8gW" firstAttribute="top" secondItem="Po6-Fs-lDP" secondAttribute="top" id="ELy-BB-o8Z"/>
+                                        <constraint firstItem="D8B-Ea-8gW" firstAttribute="centerX" secondItem="Po6-Fs-lDP" secondAttribute="centerX" id="WfB-E5-vod"/>
+                                        <constraint firstItem="D8B-Ea-8gW" firstAttribute="centerY" secondItem="Po6-Fs-lDP" secondAttribute="centerY" id="h8Q-Ld-eFm"/>
+                                        <constraint firstItem="D8B-Ea-8gW" firstAttribute="leading" secondItem="Po6-Fs-lDP" secondAttribute="leading" constant="8" id="wUr-cp-7x5"/>
+                                        <constraint firstAttribute="bottom" secondItem="D8B-Ea-8gW" secondAttribute="bottom" id="x2F-Eg-qEL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCell" id="wau-Te-a4W" customClass="AddEndDateCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="708.5" width="414" height="38.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wau-Te-a4W" id="hig-32-TzM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="38.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkF-ka-caC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="38.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                            <state key="normal" title="Add Event">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="NkF-ka-caC" secondAttribute="bottom" id="MCw-XG-udt"/>
+                                        <constraint firstItem="NkF-ka-caC" firstAttribute="centerX" secondItem="hig-32-TzM" secondAttribute="centerX" id="O6v-ZD-ha6"/>
+                                        <constraint firstItem="NkF-ka-caC" firstAttribute="centerY" secondItem="hig-32-TzM" secondAttribute="centerY" id="ofb-Rb-4ye"/>
+                                        <constraint firstItem="NkF-ka-caC" firstAttribute="top" secondItem="hig-32-TzM" secondAttribute="top" id="r8D-Co-nuH"/>
+                                        <constraint firstAttribute="trailing" secondItem="NkF-ka-caC" secondAttribute="trailing" id="vJN-NL-0tI"/>
+                                        <constraint firstItem="NkF-ka-caC" firstAttribute="leading" secondItem="hig-32-TzM" secondAttribute="leading" id="wFL-Gk-2t4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4I7-CP-dEn" id="GfM-cp-Woj"/>
+                            <outlet property="delegate" destination="4I7-CP-dEn" id="fdU-mS-B3l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Event" id="UcJ-Wm-nNj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hA-ma-udh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2582.608695652174" y="183.48214285714286"/>
+        </scene>
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
