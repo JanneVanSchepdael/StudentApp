@@ -51,8 +51,7 @@ class EventDetailDataSource: NSObject {
             }
         case .info:
             if let infoCell = cell as? EventInfoCell{
-                infoCell.configure(eventName: event.title, eventLocation: event.location, eventStart: event.startDate, eventEnd: event.endDate, eventGoing: event.interested, eventGroup: group.name
-                )
+                infoCell.configure(event)
             }
         case .description:
             if let descriptionCell = cell as? EventDescriptionCell{

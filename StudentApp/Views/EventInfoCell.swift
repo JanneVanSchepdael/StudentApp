@@ -8,7 +8,7 @@
 import UIKit
 
 class EventInfoCell: UITableViewCell {
-
+    private var event: Event?
     
     @IBOutlet weak var eventNameField: UILabel!
     @IBOutlet weak var eventLocationField: UILabel!
@@ -21,24 +21,31 @@ class EventInfoCell: UITableViewCell {
     @IBOutlet weak var eventGroupField: UILabel!
     @IBOutlet weak var eventFullLocationField: UILabel!
     
-    func configure(eventName: String, eventLocation: String, eventStart: Date,
-                   eventEnd: Date, eventGoing: Int, eventGroup: String){
+    func configure(_ e: Event){
         let df = DateFormatter()
-        df.dateFormat = "MMM d yy, h:mm a"
+        df.dateFormat = "MMM d, h:mm a"
         
-        eventNameField.text = eventName
-        eventLocationField.text = eventLocation
+        self.event = e
         
-        eventDateField.attributedText = addImageToLabel(text: df.string(from: eventStart) + "-" + df.string(from: eventEnd), imageName: "calendar")
-        eventGoingField.attributedText = addImageToLabel(text: String(eventGoing) + " going or interested", imageName: "checkmark")
-        eventGroupField.attributedText = addImageToLabel(text: "Event by " + eventGroup, imageName: "person")
-        eventFullLocationField.attributedText = addImageToLabel(text: eventLocation, imageName: "location")
+        eventNameField.text = event!.title
+        eventLocationField.text = event!.location
+        
+        // Set buttons
+        setButtons()
+        
+        // Set info with logos
+        eventDateField.attributedText = addImageToLabel(text: df.string(from: event!.startDate) + " - " + df.string(from: event!.endDate), imageName: "calendar")
+        eventGoingField.attributedText = addImageToLabel(text: String(event!.interested) + " going or interested", imageName: "checkmark")
+        eventGroupField.attributedText = addImageToLabel(text: "Event by " + event!.group.name, imageName: "person")
+        eventFullLocationField.attributedText = addImageToLabel(text: event!.location, imageName: "location")
     }
     
     @IBAction func goingButtonClicked(_ sender: Any) {
         if(goingButton.imageView?.image == UIImage(systemName: "checkmark.square")){
             interestedButton.setImage(UIImage(systemName: "star"), for: .normal)
             goingButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            
+            addInterestedEvent()
         } else{
             goingButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
         }
@@ -48,9 +55,28 @@ class EventInfoCell: UITableViewCell {
         if(interestedButton.imageView?.image == UIImage(systemName: "star")){
             interestedButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
             goingButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            
+            addInterestedEvent()
         } else{
             interestedButton.setImage(UIImage(systemName: "star"), for: .normal)
         }
+    }
+    
+    private func addInterestedEvent(){
+        if (!User.loggedUser.interestedEvents.contains(where: { $0.id == event?.id})){
+            print("Event added to interested events")
+            User.loggedUser.interestedEvents.append(event!)
+        }
+    }
+    
+    private func setButtons(){
+        if(User.loggedUser.interestedEvents.contains(where: { $0.id == event?.id})){
+            self.interestedButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else{
+            self.interestedButton.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+        
+        self.goingButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
     }
     
     // SOURCE: https://www.hackingwithswift.com/example-code/system/how-to-insert-images-into-an-attributed-string-with-nstextattachment

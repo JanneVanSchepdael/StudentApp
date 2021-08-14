@@ -157,6 +157,9 @@
                                             <state key="normal" title="Add Event">
                                                 <color key="titleColor" systemColor="labelColor"/>
                                             </state>
+                                            <connections>
+                                                <action selector="addButtonTriggered:" destination="4I7-CP-dEn" eventType="touchUpInside" id="abL-Ef-Bkm"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

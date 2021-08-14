@@ -17,8 +17,7 @@ class EventGroupCell: UITableViewCell {
     @IBOutlet weak var groupFollowButton: UIButton!
     
     func configure(imageUrl: String?, groupName: String?, groupFollowers: Int){
-        let image: UIImage = UIImage(named: "profile")!
-        groupLogo.image = image
+        groupLogo.image = UIImage(named: imageUrl ?? "profile")!
         
         groupNameField.text = groupName
         groupFollowersField.text = "\(groupFollowers) followers"

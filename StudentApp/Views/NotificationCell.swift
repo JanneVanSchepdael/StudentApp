@@ -9,7 +9,6 @@ import UIKit
 
 class NotificationCell: UITableViewCell {
 
-    
     @IBOutlet weak var notificationImage: UIImageView!
     
     @IBOutlet weak var notificationLabel: UILabel!
@@ -19,9 +18,17 @@ class NotificationCell: UITableViewCell {
     func configure(_ n: Notification){
         let df = DateFormatter()
         df.dateFormat = "dd MMM YYYY, hh:mm"
-            
-        notificationImage.image = UIImage(named: n.imageUrl)
-        notificationLabel.text = n.notification
+        
+        // Set image & make it round
+        notificationImage.image = UIImage(named: n.user.imageUrl)
+        notificationImage.layer.borderWidth = 1.0
+        notificationImage.layer.masksToBounds = false
+        notificationImage.layer.borderColor = UIColor.white.cgColor
+        notificationImage.layer.cornerRadius = notificationImage.frame.size.width / 2
+        notificationImage.clipsToBounds = true
+        
+        
+        notificationLabel.text = "\(n.user.name) has invited you to join the event \(n.event.title). Let him know if you're coming!"
         dateLabel.text = df.string(from: n.date)
     }
     

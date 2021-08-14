@@ -7,27 +7,15 @@
 
 import UIKit
 
-class NotificationListViewController: UITableViewController, NotificationDelegate {
-    
-    
+class NotificationListViewController: UITableViewController{
     
     private var notificationListDataSource: NotificationListDataSource?
-    private var notificationRepository: NotificationRepository = NotificationRepository();
     var notifications = [Notification]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set as delegate for itself
-        notificationRepository.delegate = self
-        notificationRepository.getNotificationsFromJSON()
-        
-        // Set Delegate of tableview
-        tableView.delegate = self
-    }
-    
-    func notificationsFetched(_ notifications: [Notification]) {
-        self.notifications = notifications
+        self.notifications = Notification.testData
         
         // Set Datasource of tableview
         notificationListDataSource = NotificationListDataSource(notifications)
@@ -35,5 +23,8 @@ class NotificationListViewController: UITableViewController, NotificationDelegat
         
         // Refresh tableview
         tableView.reloadData()
+        
+        // Set Delegate of tableview
+        tableView.delegate = self
     }
 }

@@ -13,8 +13,7 @@ class BannerCell: UITableViewCell {
     @IBOutlet weak var imageField: UIImageView!
     
     func configure(imageUrl: String?){
-        let image: UIImage = UIImage(named: "profile")!
-        imageField.image = image
+        imageField.image = UIImage(named: imageUrl ?? "profile")!
     }
 
 }

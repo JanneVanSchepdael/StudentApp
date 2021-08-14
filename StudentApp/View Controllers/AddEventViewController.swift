@@ -9,6 +9,18 @@ import UIKit
 
 class AddEventViewController: UITableViewController {
 
+    
+    @IBAction func addButtonTriggered(_ sender: UIButton) {
+        addEvent()
+    }
+    
+    private func addEvent(){
+        let event = Event(id: UUID().uuidString, group: Group.testData[0], user: User.testData[0], title: "Test", bannerUrl: "profile", location: "Test", description: "Test", datePosted: Date(), startDate: Date(), endDate: Date())
+        
+
+        Event.testData.insert(event, at: 0)
+    }
+    
     private var addEventDataSource: AddEventDataSource = AddEventDataSource()
 
     override func viewDidLoad() {

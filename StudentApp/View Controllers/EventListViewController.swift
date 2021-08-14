@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventListViewController: UIViewController, UITableViewDelegate, EventDelegate {
+class EventListViewController: UIViewController, UITableViewDelegate{
         
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
@@ -21,9 +21,8 @@ class EventListViewController: UIViewController, UITableViewDelegate, EventDeleg
     }
     
     private var eventListDataSource: EventListDataSource?
-    private var eventRepository: EventRepository = EventRepository();
     private var filter: EventListDataSource.Filter {
-        return EventListDataSource.Filter(rawValue: filterSegmentedControl.selectedSegmentIndex) ?? .popular
+        return EventListDataSource.Filter(rawValue: filterSegmentedControl.selectedSegmentIndex) ?? .all
     }
     
     var events = [Event]()
@@ -31,9 +30,14 @@ class EventListViewController: UIViewController, UITableViewDelegate, EventDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set as delegate for itself
-        eventRepository.delegate = self
-        eventRepository.getEventsFromJSON()
+        self.events = Event.testData
+        
+        // Set Datasource of tableview
+        eventListDataSource = EventListDataSource(events: events)
+        tableView.dataSource = eventListDataSource
+        
+        // Refresh tableview
+        tableView.reloadData()
 
         // Set Delegate of tableview
         tableView.delegate = self
@@ -54,18 +58,6 @@ class EventListViewController: UIViewController, UITableViewDelegate, EventDeleg
         
         //set event in detail controller
         detailVC.configure(with: selectedEvent)
-    }
-
-    // MARK: - Event Delegate Methods
-    func eventsFetched(_ events: [Event]) {
-        self.events = events
-        
-        // Set Datasource of tableview
-        eventListDataSource = EventListDataSource(events: events)
-        tableView.dataSource = eventListDataSource
-        
-        // Refresh tableview
-        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

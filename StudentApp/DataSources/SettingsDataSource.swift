@@ -30,7 +30,7 @@ class SettingsDataSource: NSObject {
         var numRows: Int {
             switch self {
                 case .account: return 3
-                case .preferences, .notifications: return 2
+                case .preferences, .notifications: return 3
                 case .logout: return 1
             }
         }
@@ -40,9 +40,9 @@ class SettingsDataSource: NSObject {
                 case .account:
                     return ["ChangeEmail", "ChangePassword", "Help"][row]
                 case .preferences:
-                    return ["Privacy", "Language"][row]
+                    return ["Privacy", "Timezone", "Language"][row]
                 case .notifications:
-                    return ["PushNotifications", "EmailNotifications"][row]
+                    return ["PushNotifications", "EmailNotifications", "SMSNotifications"][row]
                 case .logout:
                     return "LogOut"
             }

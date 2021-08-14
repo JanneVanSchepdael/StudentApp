@@ -16,21 +16,17 @@ class EventListDataSource: NSObject {
     }
     
     enum Filter: Int{
-        case home
-        case popular
-        
-        func shouldInclude(following: Bool) -> Bool{
-            switch self {
-                case .home: return following
-                case .popular: return true
-            }
-        }
+        case interested
+        case all
     }
     
-    var filter: Filter = .popular
+    var filter: Filter = .all
     
     var filteredEvents: [Event]{
-        return events.filter { filter.shouldInclude(following: $0.following)}.sorted { $0.startDate < $1.startDate }
+        switch self.filter{
+            case .interested: return User.loggedUser.interestedEvents
+            case .all: return events
+        }
     }
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class ProfileViewController: UIViewController, UICollectionViewDelegate{
     
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -22,37 +22,40 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var groupListDatasource: GroupListDataSource?
+    var groups: [Group] = [Group]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.groups = User.loggedUser.followedGroups
+        
         collectionView.delegate = self
-        collectionView.dataSource = self
+        
+        groupListDatasource = GroupListDataSource(groups: self.groups)
+        collectionView.dataSource = groupListDatasource
         
         configureItems()
-        
-        
     }
     
     private func configureItems(){
+        // Profile button border
         editProfileButton.backgroundColor = .clear
         editProfileButton.layer.cornerRadius = 5
         editProfileButton.layer.borderWidth = 1
         editProfileButton.layer.borderColor = UIColor.black.cgColor
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
-            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
-            return view
-        }
-        fatalError("Unexpected kind")
+        
+        // Profile image
+        profileImage.image = UIImage(named: User.loggedUser.imageUrl)
+        profileImage.layer.borderWidth = 1.0
+        profileImage.layer.masksToBounds = false
+        profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
+        profileImage.clipsToBounds = true
+        
+        // Labels
+        nameLabel.text = User.loggedUser.name
+        functionLabel.text = User.loggedUser.function
+        studyLabel.text = User.loggedUser.study
     }
 }

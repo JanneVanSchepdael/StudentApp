@@ -1,4 +1,4 @@
-import Foundation
+/*import Foundation
 
 protocol EventDelegate {
     func eventsFetched(_ events:[Event])
