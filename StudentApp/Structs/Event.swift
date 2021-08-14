@@ -1,9 +1,31 @@
 import Foundation
 
+/*struct Event{
+    var id: String
+    var group: Group
+    var user: String
+    var title: String
+    var interested: Int = 0
+    var following: Bool
+    
+    var bannerUrl: String
+    var location: String
+    var description: String
+
+    var datePosted: Date
+    var startDate: Date
+    var endDate: Date
+}
+
+extension Event{
+    static var testData = [
+        Event(id: UUID().uuid, group: Group(), user: User(), title: <#T##String#>, following: <#T##Bool#>, bannerUrl: <#T##String#>, location: <#T##String#>, description: <#T##String#>, datePosted: <#T##Date#>, startDate: <#T##Date#>, endDate: <#T##Date#>)
+    ]
+}*/
 
 struct Event : Decodable{
     var id: Int = -1
-    var group: Group = Group()
+    var group: Group = Group(id: "0", name: "", imageUrl: "", followers: 0, description: "", website: "", shortDescription: "", groupSort: "")
     var user: String = "PLACEHOLDER USER"
     var title: String = ""
     var interested: Int = 0

@@ -8,25 +8,20 @@
 import UIKit
 
 class GroupsViewController: UICollectionViewController {
+    
+    var groups = [Group]()
+    
+    private var groupListDatasource: GroupListDataSource?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.groups = Group.testData
+        
+        collectionView.delegate = self
+        
+        groupListDatasource = GroupListDataSource(groups: groups)
+        collectionView.dataSource = groupListDatasource
     }
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath)
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
-            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
-            return view
-        }
-        fatalError("Unexpected kind")
-    }
-
 }

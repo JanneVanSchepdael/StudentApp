@@ -16,18 +16,17 @@
                 <collectionViewController id="Rc6-Ja-4Z0" customClass="GroupsViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QCs-LT-ICn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-3"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jQw-66-Kuy">
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="65" minimumInteritemSpacing="0.0" id="jQw-66-Kuy">
                             <size key="itemSize" width="128" height="146"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="50" minY="0.0" maxX="50" maxY="40"/>
+                            <inset key="sectionInset" minX="50" minY="15" maxX="50" maxY="65"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupCell" id="gQJ-jV-lm9">
-                                <rect key="frame" x="50" y="50" width="128" height="146"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupCell" id="gQJ-jV-lm9" customClass="GroupCell" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="50" y="65" width="128" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j61-aV-J2G">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="146"/>
@@ -59,6 +58,10 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="tintColor" name="AccentColor"/>
+                                <connections>
+                                    <outlet property="groupImage" destination="xLC-Kj-IoB" id="hsH-VB-9Z0"/>
+                                    <outlet property="groupName" destination="h0p-Zk-6ew" id="3fT-h0-rRA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="Jy5-3q-Uy9">
